@@ -1,0 +1,35 @@
+{% extends "TecnoCoder/padre.html" %}
+{% load static %}
+
+
+{% block tituloCambia %}
+
+    TecnoCoder
+
+{% endblock %}
+
+{% block bannerCambia %}
+
+   <h4>Tecno Blog</h4>
+   <h5>Seleccion de noticias y proyectos</h5>
+
+{% endblock %}
+{% block contenidoQueCambia %}
+
+
+    <div class="contenedor">        
+     <img src="../../static/TecnoCoder/img/wave-white.svg" alt="division" class="wave">
+     <form class="formularioLogin" action="" method="POST">
+        <h3>Complete los campos a modificar</h3>
+        {%  csrf_token %}
+        {{form.as_p}}
+        <button class="enviar" type="submit">Modificar!</button>
+        <a href="{% url 'Blog' %}"><button class="cancelar" type="button">Cancelar</button></a>
+    </form>
+  
+     
+    </div> 
+    
+
+
+{% endblock %}

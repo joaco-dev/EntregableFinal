@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    {% load static %}
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{%static 'TecnoCoder/css/estilo1.css' %}" rel="stylesheet" />
+
+    <title>Editar Perfil</title>
+</head>
+<body>
+    <form action="" method="POST" class="formularioLogin" enctype="multipart/form-data">
+            <img margin="20px auto" height="300px" width= "300px" src="{{object.imagen.url}}">
+            <br>
+        {% csrf_token %}
+        
+            {{form.as_table}}
+        
+        <button class="enviar" type="submit">Guardar</button>
+            <a href="{% url 'Inicio' %}"><button class="cancelar" type="button">Cancelar</button></a>
+    </form>
+</body>
+</html>

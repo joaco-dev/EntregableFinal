@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        {% load static %}
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="format-detection" content="telephone=no">
+       
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <meta name="viewport" content="width=device, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+         <!-- Favicon-->
+         <link rel="icon" type="image/x-icon" href="{%static 'TecnoCoder/assets/favicon.ico' %}" />
+         <!-- Bootstrap icons-->
+    
+        <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,700" rel="stylesheet">
+        <link href="{%static 'TecnoCoder/css/font-awesome.min.css' %}" rel="stylesheet">
+    
+        <script src="{%static 'TecnoCoder/js/jquery.min.js' %}" type="text/javascript"></script> 
+
+        <link href="{%static 'TecnoCoder/css/estilos.css' %}" rel="stylesheet" />
+        <link href="{%static 'TecnoCoder/css/estilo1.css' %}" rel="stylesheet" />
+        <link href="{%static 'TecnoCoder/css/blog.css' %}" rel="stylesheet" />
+
+
+    </head>
+    <body>
+
+        <header id="header">
+
+            <nav class="login2">
+            
+                {% if not request.user.is_authenticated  %}
+                  <a name="" id="" class="botonLogin" href="{% url 'Login' %}" role="button">Iniciar Sesión</a>
+                {% endif %}
+    
+                {% if request.user.is_authenticated %}
+                   <div class="center">
+                    <p class="login2p" ><img height="30px" src="{{url}}">  Hola {{user.username}}!</p>
+                  </div>
+                  <a name="" id="" class="botonLogin" href="{% url 'logout' %}" role="button">Cerrar Sesión</a>
+                  <a name="" id="" class="botonLogin" href="{% url 'EditarPerfil' %}" role="button">Editar Usuario</a>
+
+    
+                {%endif%}
+                  
+            </nav>
+            <nav class="menu">
+                  <div class="logo">
+                        <a href="{% url 'Inicio' %}"><img src="../../static/TecnoCoder/img/logo.png" alt=""></a>
+                        <a href="#" class="btn-menu" id="btn-menu">
+                         <i class="icono fa fa-bars" aria-hidden="true"></i></a>	   	  	
+                  </div>
+                      
+                  <div class="enlaces" id="enlaces">
+                      <a href="{% url 'Inicio' %}">Home</a>
+                      <a href="{% url 'Nosotros' %}">Nosotros</a>
+                      <a href="{% url 'Blog' %}">Tecno Blog</a>    
+                    {% if request.user.is_authenticated %}
+                      <a href="{% url 'NuevoBlog' %}">Nueva Entrada</a>
+                    {% endif %}                       
+                  </div>
+            </nav>            
+            
+         </header>
+     
+        <!-- Navigation-->
+
+        
+        
+
+
+        <!-- Masthead-->
+        <div class="masthead" >
+
+        {% block bannerCambia %}
+
+        {% endblock %}
+
+            
+        </div>
+       
+
+
+        <!-- Esto es lo que va a cambiar-->
+
+        {% block contenidoQueCambia %}
+        
+        
+        {% endblock %}
+
+       
+       
+
+
+
+        
+     
+        <!-- Footer-->
+        <footer class="footerBeta">  
+            
+            <p class="pcolor">&copy; TecnoCoder</p>
+                        
+        </footer>
+
+
+
+    <script src="{%static 'TecnoCoder/js/jquery.min.js' %}"></script>
+	<script src="{%static 'TecnoCoder/js/headroom.min.js' %}"></script>
+	<script src="{%static 'TecnoCoder/js/menu.js' %}"></script>
+</body>
+</html>

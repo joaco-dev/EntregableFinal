@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{%static 'TecnoCoder/css/estilo1.css' %}" rel="stylesheet" />
+
+    <title>Exito!</title>
+</head>
+<body>
+
+    <form class="formularioLogin" action="" method="POST">
+      <h2>Usuario Registrado!</h1>
+
+      <a href="{% url 'Inicio' %}"><button class="enviar" type="button">Inicio</button></a>
+      <a href="{% url 'Login' %}"><button class="cancelar" type="button">Log in</button></a>
+
+    </form>  
+    
+</body>
+</html>

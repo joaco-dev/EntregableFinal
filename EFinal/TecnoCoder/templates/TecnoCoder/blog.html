@@ -1,0 +1,63 @@
+{% extends "TecnoCoder/padre.html" %}
+{% load static %}
+
+
+{% block tituloCambia %}
+
+    TecnoCoder
+
+{% endblock %}
+
+{% block bannerCambia %}
+
+   <h4>Tecno Blog</h4>
+   <h5>Seleccion de noticias y proyectos</h5>
+
+{% endblock %}
+{% block contenidoQueCambia %}
+
+
+    <div class="contenedor">
+     <img src="../../static/TecnoCoder/img/wave-white.svg" alt="division" class="wave">
+
+     <div class="card">
+
+       {% for blogs in blog %}
+       <div class="card-body">
+         <table class="table">
+           <tbody class="xx">
+             
+             <tr> 
+              <td><h1>{{blogs.titulo}}</h1></td>
+             </tr>
+             <tr> 
+              <td>
+                <img src="{{blogs.imagen.url}}" class="imgBlog"/>
+              </td>
+             </tr>
+             <tr> 
+              <td>{{blogs.descripcion}}</td>
+             </tr>
+             <tr> 
+              <td> <b>Autor:</b> {{blogs.autor}}</td>
+             </tr>
+             <tr> 
+              <td>
+              <a href="/editar-blog/{{blogs.id}}/"><button class="cancelar" type="button">Editar Blog</button></a>
+              <a href="/eliminar-blog/{{blogs.id}}/"><button class="enviar" type="button">Eliminar Blog</button></a></td>
+             </tr>
+                               
+            </tbody>         
+         </table>
+       </div>
+       {% endfor %}  
+
+       
+     </div>
+  
+     
+    </div> 
+    
+
+
+{% endblock %}

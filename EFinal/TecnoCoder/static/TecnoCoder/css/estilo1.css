@@ -1,0 +1,208 @@
+@charset "UTF-8";
+
+body {
+	background: rgb(29 7 75);
+	font-family: 'Nunito Sans', sans-serif;
+	font-size: 16px;
+	padding-top: 60px;
+
+    background-repeat: no-repeat;
+ 
+    background-attachment: fixed;
+
+    background-size: cover;
+
+}
+
+h4{
+    width: 100%;
+    text-align: center;
+    font-size: 3em;
+    margin: -15% auto -10% auto;
+
+}
+.masthead h5{
+    text-align: center;
+    color: rgb(255, 245, 240);
+    font-size: 2em;
+}
+.masthead h4{
+    text-align: center;
+    color: #fff;
+    font-size: 3em;
+    margin: 0;
+    padding: 0;
+}
+.masthead{
+
+  
+    width: 100%;
+    min-height: 400px;
+    margin: 5% auto ;
+    padding: 15% 0 15% 0;
+
+    background-image: url(../img/111.jpeg);
+    background-size: cover;
+
+}
+.imgLogin{
+    width: 100%;
+}
+
+.login2{
+    width: 100%;
+    height: auto;
+    padding: 0.5%;
+    background-color: rgb(29, 29, 29);
+
+    display: flex;
+    justify-content: right;
+}
+.login2p{
+    width: 180px;
+    font-size: 0.9em;
+    height: auto;
+    color: #fff;
+    text-align: center;
+    margin: 2px;
+    vertical-align: middle;
+
+
+}
+.center img{
+    object-fit: cover;
+    margin: 0px;
+    width: 60px;
+    height: 30px;
+    vertical-align: middle;
+
+
+}
+.botonLogin{
+    min-width: 100px;
+    height: auto;
+    margin: 2px;
+    padding: 4px;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    background-color: #802BB1;
+    font-size: 0.8em;
+    transition: 0.5s;
+    border-radius: 2px;
+
+}
+.botonLogin:hover{
+    background-color: #52077c;
+    color: rgb(246, 246, 246);
+    transition: 0.5s;
+
+}
+
+.formularioLogin{
+    width: 60%;
+    margin: 20px auto;
+    border: 1px solid #dc12fb;
+    height: auto;
+    padding: 30px;
+}
+.formularioLogin input{
+    width: 100%;
+    text-align: left;
+    padding: 5px;
+    margin-top: 10px;
+
+
+}
+.formularioLogin h2,h3{
+    text-align: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: #cb2d6f;
+}
+.formularioLogin label,p{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-bottom: 4px;
+    color: #fff;
+}
+
+.enviar, .cancelar{
+    width: 100%;
+    background-color: #D9B08C;
+    border-radius: 2px;
+    border: none;
+    padding: 10px ;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+.enviar:hover{
+    background-color: #FFCB9A;
+    transition: 0.3s;
+
+
+}
+.cancelar{ 
+    background-color: #501F3A;
+}
+.cancelar:hover{ 
+    background-color: #CB2D6F;
+}
+
+.content50{
+    width: 40%;
+    margin: 0 4%;
+}
+
+.content50 img{
+    width: 100%;
+    
+}
+.footerBeta{
+    padding: 2em 0;
+    background-color: rgb(4, 4, 4);
+}
+.pcolor{
+    text-align: center;
+    color: #fff;
+
+}
+
+@media screen and (max-width: 900px ){
+
+
+}
+
+
+@media screen and (max-width: 700px ){
+    .masthead{
+        min-height: 200px;
+        padding: 18% 5%;
+    }
+    .masthead h5{
+        font-size: 1.5em;
+        font-weight: normal;
+    }
+    .masthead h4{
+        font-size: 2em;
+
+    }
+    .content50{
+        width: 100%;
+        margin: 0 4%;
+    }
+    .formularioLogin{
+        width: 80%;    
+    }
+    h4{
+
+        margin: -5% auto -10% auto;
+    
+    }
+}
+
+
+    
+
+       

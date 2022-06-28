@@ -1,0 +1,36 @@
+{% extends "TecnoCoder/padre.html" %}
+{% load static %}
+
+
+{% block tituloCambia %}
+
+    TecnoCoder
+
+{% endblock %}
+
+{% block bannerCambia %}
+
+   <h4>Tecno Blog</h4>
+   <h5>Seleccion de noticias y proyectos</h5>
+
+{% endblock %}
+{% block contenidoQueCambia %}
+
+<div class="staff-body" >
+    <h4>Estas por eliminar el blog {{object.titulo}}, estas seguro?</h4>
+    <div class="content50">
+        <div class="row">
+            <div class="col">
+                <form method = "POST" >
+                    {% csrf_token %}
+                    <button class="enviar" type="submit">Eliminar</button>
+                    <a href="{% url 'Blog' %}"><button class="cancelar" type="button">Cancelar</button></a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div> 
+    
+
+
+{% endblock %}
