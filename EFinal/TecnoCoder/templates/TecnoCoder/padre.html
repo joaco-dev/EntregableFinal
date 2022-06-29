@@ -39,7 +39,7 @@
     
                 {% if request.user.is_authenticated %}
                    <div class="center">
-                    <p class="login2p" ><img height="30px" src="{{url}}">  Hola {{user.username}}!</p>
+                    <p class="login2p" ><img height="30px" src="{{url}}">  Hola {{user.username}}! </p>
                   </div>
                   <a name="" id="" class="botonLogin" href="{% url 'logout' %}" role="button">Cerrar Sesión</a>
                   <a name="" id="" class="botonLogin" href="{% url 'EditarPerfil' %}" role="button">Editar Usuario</a>

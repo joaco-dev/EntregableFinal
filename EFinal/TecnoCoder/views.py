@@ -13,11 +13,6 @@ from django.urls import reverse
 from django.contrib.auth.mixins import LoginRequiredMixin
 
 from django.views.generic import DetailView, UpdateView, DeleteView
-
-# @login_required
-# def inicio2(request):
-#       avatares = Avatar.objects.filter(user=request.user.id)
-#       return render(request, "TecnoCoder/inicio2.html", {"url": avatares[0].imagen.url})
       
 def inicio(request):
       avatares = Avatar.objects.filter(user=request.user.id).exists()
