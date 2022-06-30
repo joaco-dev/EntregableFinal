@@ -17,9 +17,12 @@
     <form class="formularioLogin" action="" method="POST"> 
 
         <h2>TecnoCoder</h2>
+        {% if imagen == "" %}
+        {% else %}
         <a class="nav-link" href="/update-user-profile/{{id}}/">
             <img alaign= "center" height="300px" width= "300px" src="{{imagen}}">
         </a>
+        {% endif %}
         <h3>Editar formulario de {{usuario}}</h3>
     
         {% csrf_token %}

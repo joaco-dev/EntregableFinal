@@ -98,9 +98,15 @@ def register(request):
 def editarPerfil(request):
       usuario = request.user
       avatares = Avatar.objects.filter(user=request.user.id)
-      imagen =avatares[0].imagen.url
-      idImagen = avatares[0].id
-      print(idImagen)
+      print(avatares)
+      if avatares.exists():
+            imagen =avatares[0].imagen.url
+            idImagen = avatares[0].id
+            print(imagen)
+            print(idImagen)
+      else:
+            imagen =""
+            idImagen = ""
       if request.method == 'POST':
             miFormulario = UserEditForm(request.POST)
             if miFormulario.is_valid:
